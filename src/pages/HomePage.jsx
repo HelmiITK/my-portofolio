@@ -1,6 +1,8 @@
 import Navbar from "../components/NavbarComponent"
 import MainSactionComponent from "../components/MainSactionComponent"
 import AboutComponent from "../components/AboutComponent"
+import ContactMeComponent from "../components/ContactMeComponent"
+import FooterComponent from "../components/FooterComponent"
 
 const HomePage = () => {
   return (
@@ -10,6 +12,8 @@ const HomePage = () => {
         {/* main section */}
         <MainSactionComponent />
         <AboutComponent />
+        <ContactMeComponent />
+        <FooterComponent />
       </div>
     </>
   )

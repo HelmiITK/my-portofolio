@@ -6,11 +6,11 @@ import bulat from "../assets/Ellipse 15.png"
 
 const MainSactionComponent = () => {
   return (
-    <div className="flex flex-col mx-4 mt-4">
+    <div className="flex flex-col mx-4 pt-24 z-10">
       {/* say hello */}
       <div className="flex flex-col gap-3">
         <div className="capitalize">
-          <h1 className="text-quinary text-sm">hello</h1>
+          <h1 className="text-quinary text-sm">hello 👋🏻</h1>
           <h2 className="text-quaternary font-semibold text-2xl">im helmi</h2>
         </div>
         <div className="capitalize">
@@ -28,7 +28,7 @@ const MainSactionComponent = () => {
       <div className="relative">
         <img src={shadow} alt="" className="animate-pulse" />
         <div className="flex justify-center items-center">
-          <img src={helmi} alt="" className="top-0 w-96 absolute" />
+          <img src={helmi} alt="" className="top-0 w-96 absolute drop-shadow-2xl" />
           <img src={bintang} alt="" className="w-16 h-16 absolute top-10 left-10 animate-spin" />
           <img src={bulat} alt="" className="w-14 h-14 absolute left-4 bottom-4 animate-bounce" />
           <img src={kotak} alt="" className="w-14 h-14 absolute top-36 right-4 animate-pulse" />

@@ -9,9 +9,9 @@ const NavbarComponent = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-lime-50 relative">
+    <div className="w-full bg-gradient-to-b from-lime-50 fixed z-50">
       <div className="flex justify-between items-center">
-        <img src={logo} alt="Logo" className="w-24 z-10" />
+        <img src={logo} alt="Logo" className="w-24" />
         {/* hamburger menu */}
         <button
           className="btn btn-circle swap swap-rotate bg-transparent border-none z-30 relative"
