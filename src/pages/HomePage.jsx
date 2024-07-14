@@ -9,7 +9,6 @@ const HomePage = () => {
     <>
       <div className="container mx-auto bg-primary h-auto">
         <Navbar />
-        {/* main section */}
         <MainSactionComponent />
         <AboutComponent />
         <ContactMeComponent />
