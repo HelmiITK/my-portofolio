@@ -34,7 +34,7 @@ const MainSactionComponent = () => {
                 speed: 0.15,
                 points: 4
               }}
-              className="absolute z-10 bottom-[0.5px] "
+              className="absolute z-10 bottom-[0.5px]"
             />
           </button>
         </div>
@@ -48,7 +48,7 @@ const MainSactionComponent = () => {
           <img src={helmi} alt="" className="top-4 w-96 absolute drop-shadow-2xl" />
           <img src={bintang} alt="" className="w-16 h-16 absolute top-10 left-10 animate-spin" />
           <img src={bulat} alt="" className="w-14 h-14 absolute left-4 -bottom-6 animate-bounce" />
-          <img src={kotak} alt="" className="w-16 h-16 absolute top-36 right-4 animate-pulse" />
+          <img src={kotak} alt="" className="w-16 h-16 absolute top-36 right-4 loading-bars" />
         </div>
       </div>
     </div>

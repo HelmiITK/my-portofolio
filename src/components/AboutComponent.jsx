@@ -13,7 +13,7 @@ import fotoItk2 from "../assets/foto_itk.jpeg"
 
 const AboutComponent = () => {
   return (
-    <div className="mt-6 mb-80 relative">
+    <div className="mt-6 mb-72 relative">
       <img
         src={wave}
         alt="wave"
@@ -130,7 +130,7 @@ const AboutComponent = () => {
         </div>
         <dialog id="my_modal_3" className="modal">
           <div className="modal-box flex flex-col gap-2">
-            <h3 className="font-bold text-lg text-center">SMP Negeri 02</h3>
+            <h3 className="font-bold text-lg text-center">SMP Negeri 02 Muara Badak</h3>
             <img
               src={fotoSmp2}
               alt=""
