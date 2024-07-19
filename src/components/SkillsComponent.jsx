@@ -12,6 +12,9 @@ import jsLogo from "../assets/JS 1.png"
 import tailwindLogo from "../assets/Tailwind.png"
 import postmanLogo from "../assets/postman-logo.png"
 import vercelLogo from "../assets/vercel-logo.svg"
+import reduxLogo from "../assets/redux-logo.png"
+import unityLogo from "../assets/unity-logo.png"
+import aspriteLogo from "../assets/aspirite-logo.png"
 
 const SkillsComponent = () => {
   const settings1 = {
@@ -45,7 +48,7 @@ const SkillsComponent = () => {
           my skills
         </h1>
         {/* skill1 */}
-        <div className="slider-container overflow-hidden mt-6 mb-6 bg-gradient-to-r from-secondary via-neutral py-2">
+        <div className="slider-container overflow-hidden mt-6 mb-6 bg-transparent py-2 shadow-[0px_2px_70px_-10px] shadow-green-500 drop-shadow-2xl">
           <Slider {...settings1}>
             <img
               src={reactLogo}
@@ -72,11 +75,15 @@ const SkillsComponent = () => {
               alt=""
               className="w-12 h-12 object-contain"
             />
+            <img src={reduxLogo}
+              alt=""
+              className="w-12 h-12 object-contain"
+            />
           </Slider>
         </div>
         {/* <div className="h-3 w-full my-4 bg-gradient-to-l from-white via-quaternary rounded-badge blur-md loading-dots shadow-xl drop-shadow-xl shadow-quaternary"></div> */}
         {/* skill2 */}
-        <div className="slider-container overflow-hidden bg-gradient-to-l from-secondary via-neutral py-2">
+        <div className="slider-container overflow-hidden bg-transparent  py-2 shadow-[0px_2px_70px_-10px] shadow-green-500 drop-shadow-2xl">
           <Slider {...settings2}>
             <img
               src={figmaLogo}
@@ -103,9 +110,18 @@ const SkillsComponent = () => {
               alt=""
               className="w-12 h-12 object-contain"
             />
+            <img
+              src={unityLogo}
+              alt=""
+              className="w-12 h-12 object-contain"
+            />
+            <img
+              src={aspriteLogo}
+              alt=""
+              className="w-12 h-12 object-contain"
+            />
           </Slider>
         </div>
-
       </div>
     </>
   )

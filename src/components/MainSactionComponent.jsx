@@ -5,7 +5,7 @@ import kotak from "../assets/Rectangle 4.png"
 import bulat from "../assets/Ellipse 15.png"
 import wave from "../assets/pattern.svg"
 
-import Wave from "react-wavify"
+// import Wave from "react-wavify"
 
 const MainSactionComponent = () => {
   return (
@@ -25,7 +25,7 @@ const MainSactionComponent = () => {
             <h2 className="absolute top-2 inset-x-10 z-20">
               contact me
             </h2>
-            <Wave fill='#005C53'
+            {/* <Wave fill='#005C53'
               paused={false}
               style={{ display: 'flex' }}
               options={{
@@ -35,7 +35,7 @@ const MainSactionComponent = () => {
                 points: 4
               }}
               className="absolute z-10 bottom-[0.5px]"
-            />
+            /> */}
           </button>
         </div>
       </div>

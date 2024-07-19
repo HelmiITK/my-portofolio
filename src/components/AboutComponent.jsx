@@ -13,7 +13,7 @@ import fotoItk2 from "../assets/foto_itk.jpeg"
 
 const AboutComponent = () => {
   return (
-    <div className="mt-6 mb-72 relative">
+    <div className="mt-6 mb-[280px] relative">
       <img
         src={wave}
         alt="wave"

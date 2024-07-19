@@ -5,6 +5,7 @@ import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { SiMinutemailer } from "react-icons/si";
 // import IconWithHoverTextComponen from "./IconWithHoverTextComponen";
+import SpotifyComponent from "./SpotifyComponent";
 
 const ContactMeComponent = () => {
   const icon = [
@@ -31,13 +32,14 @@ const ContactMeComponent = () => {
   ]
   return (
     <div className="mt-10 mb-8">
-      <h1 className="text-center text-white text-2xl font-medium mb-4">Contact me</h1>
+      <h1 className="text-center text-white text-2xl font-medium mb-4">Its Me</h1>
+
       {/* via sosial media */}
-      <div className="flex items-center">
+      <div className="flex items-center mt-2">
         <img
           src={imgHelmi}
           alt="img-helmi"
-          className="w-1/2"
+          className="w-1/2 drop-shadow-2xl"
         />
         <div className="flex flex-col mx-8 gap-4">
           {icon.map((item, i) => (
@@ -54,10 +56,14 @@ const ContactMeComponent = () => {
           ))}
         </div>
       </div>
+      {/* My Spotify */}
+      <div className="flex mt-8 justify-center drop-shadow-2xl shadow-green-700">
+        <SpotifyComponent />
+      </div>
       {/* via email */}
       <form
         action=""
-        className="flex flex-col gap-2 justify-center items-center mt-6 border-none mx-4 rounded-md py-4 "
+        className="flex flex-col gap-2 justify-center items-center mt-12 border-none mx-4 rounded-md py-4 "
       >
         <SiMinutemailer className="w-12 h-12 text-quaternary" />
         <h1 className="text-quaternary font-medium text-lg capitalize">contact me</h1>
@@ -123,7 +129,7 @@ const ContactMeComponent = () => {
         </label>
         {/* kirim */}
         <button
-          type="submit" 
+          type="submit"
           className="capitalize text-sm border border-quaternary rounded-md py-2 px-8 font-medium mt-4 mb-1 text-quaternary">
           send message
         </button>
