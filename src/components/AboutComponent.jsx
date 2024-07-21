@@ -4,7 +4,7 @@ import smp from "../assets/logo-smp.png"
 import smk from "../assets/logo-sma.png"
 import kuliah from "../assets/logo-itk.png"
 import Wave from "react-wavify"
-import { FaInfoCircle } from "react-icons/fa";
+import { PiInfoThin } from "react-icons/pi";
 
 import fotoSd2 from "../assets/foto_sd.webp"
 import fotoSmp2 from "../assets/foto_smp2.jpg"
@@ -22,7 +22,7 @@ const AboutComponent = () => {
       <h1 className="text-white font-medium text-2xl text-center capitalize absolute top-8 inset-0">about me</h1>
       {/* SD */}
       <div className="absolute top-20 left-3">
-        <div className="border border-red-500 w-full drop-shadow-md text-white bg-black bg-opacity-10  rounded-md p-4 flex flex-row gap-4 items-center">
+        <div className="border border-red-600 w-full drop-shadow-md text-white bg-black bg-opacity-10  rounded-md p-4 flex flex-row gap-4 items-center">
           <div className="flex flex-col items-center z-20">
             <h1 className="font-medium text-base">SD</h1>
             <img
@@ -60,9 +60,9 @@ const AboutComponent = () => {
             className="absolute z-10 bottom-0 left-0"
           />
           {/* Open the modal using document.getElementById('ID').showModal() method */}
-          <FaInfoCircle
+          <PiInfoThin 
             type="button"
-            className="z-20 w-8 h-8"
+            className="z-20 w-8 h-8 text-quaternary"
             onClick={() => document.getElementById('my_modal_2').showModal()}
           />
         </div>
@@ -122,9 +122,9 @@ const AboutComponent = () => {
             }}
             className="absolute z-10 bottom-0 left-0"
           />
-          <FaInfoCircle
+          <PiInfoThin 
             type="button"
-            className="z-20 w-8 h-8"
+            className="z-20 w-8 h-8 text-quaternary"
             onClick={() => document.getElementById('my_modal_3').showModal()}
           />
         </div>
@@ -187,9 +187,9 @@ const AboutComponent = () => {
             }}
             className="absolute z-10 bottom-0 left-0"
           />
-          <FaInfoCircle
+          <PiInfoThin 
             type="button"
-            className="z-20 w-8 h-8"
+            className="z-20 w-8 h-8 text-quaternary"
             onClick={() => document.getElementById('my_modal_4').showModal()}
           />
         </div>
@@ -252,9 +252,9 @@ const AboutComponent = () => {
             }}
             className="absolute z-10 bottom-0 left-0"
           />
-          <FaInfoCircle
+          <PiInfoThin 
             type="button"
-            className="z-20 w-8 h-8"
+            className="z-20 w-8 h-8 text-quaternary"
             onClick={() => document.getElementById('my_modal_5').showModal()}
           />
         </div>

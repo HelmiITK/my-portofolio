@@ -5,6 +5,7 @@ import SkillsComponent from "../components/SkillsComponent"
 import CertificateComponent from "../components/CertificateComponent"
 import ContactMeComponent from "../components/ContactMeComponent"
 import FooterComponent from "../components/FooterComponent"
+import ExperienceComponent from "../components/ExperienceComponent"
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
         <AboutComponent />
         <SkillsComponent />
         <CertificateComponent />
+        <ExperienceComponent />
         <ContactMeComponent />
         <FooterComponent />
       </div>
