@@ -11,7 +11,16 @@ import fotoSmp2 from "../assets/foto_smp2.jpg"
 import fotoSmk2 from "../assets/smk2smd.jpeg"
 import fotoItk2 from "../assets/foto_itk.jpeg"
 
+import AOS from "aos"
+import '../../node_modules/aos/dist/aos.css'
+import { useEffect } from "react"
+
 const AboutComponent = () => {
+  useEffect(() => {
+    AOS.init({
+      once: false,
+    })
+  })
   return (
     <div className="mt-6 mb-[280px] relative">
       <img
@@ -19,9 +28,17 @@ const AboutComponent = () => {
         alt="wave"
         className="rotate-180"
       />
-      <h1 className="text-white font-medium text-2xl text-center capitalize absolute top-8 inset-0">about me</h1>
+      <h1 className="text-white font-medium text-2xl text-center capitalize absolute top-8 inset-0"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >about me</h1>
       {/* SD */}
-      <div className="absolute top-20 left-3">
+      <div className="absolute top-20 left-3"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        // data-aos-offset="300"
+        data-aos-delay="0"
+      >
         <div className="border border-red-600 w-full drop-shadow-md text-white bg-black bg-opacity-10  rounded-md p-4 flex flex-row gap-4 items-center">
           <div className="flex flex-col items-center z-20">
             <h1 className="font-medium text-base">SD</h1>
@@ -84,7 +101,12 @@ const AboutComponent = () => {
         </dialog>
       </div>
       {/* SMP */}
-      <div className="absolute top-56 right-3">
+      <div className="absolute top-56 right-3"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        // data-aos-offset="300"
+      >
         <div className="border border-blue-500 w-full drop-shadow-md text-white bg-black bg-opacity-10 rounded-md p-4 flex flex-row gap-4 items-center">
           <div className="flex flex-col items-center z-20">
             <h1 className="font-medium text-base">SMP</h1>
@@ -149,7 +171,10 @@ const AboutComponent = () => {
         </dialog>
       </div>
       {/* SMK */}
-      <div className="absolute top-[370px] left-3">
+      <div className="absolute top-[370px] left-3"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="200">
         <div className="border border-gray-500 w-full drop-shadow-md text-white bg-black bg-opacity-10  rounded-md p-4 flex flex-row gap-4 items-center">
           <div className="flex flex-col items-center z-20">
             <h1 className="font-medium text-base">SMK</h1>
@@ -214,7 +239,10 @@ const AboutComponent = () => {
         </dialog>
       </div>
       {/* Kuliah */}
-      <div className="absolute top-[520px] right-3">
+      <div className="absolute top-[520px] right-3"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="200">
         <div className="border border-green-500 w-full drop-shadow-md text-white bg-black bg-opacity-10  rounded-md p-4 flex flex-row gap-4 items-center">
           <div className="flex flex-col items-center z-20">
             <h1 className="font-medium text-base">Univ</h1>

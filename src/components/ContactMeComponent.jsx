@@ -4,8 +4,11 @@ import { FaThreads } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { SiMinutemailer } from "react-icons/si";
-// import IconWithHoverTextComponen from "./IconWithHoverTextComponen";
 import SpotifyComponent from "./SpotifyComponent";
+
+import AOS from "aos"
+import '../../node_modules/aos/dist/aos.css'
+import { useEffect } from "react"
 
 const ContactMeComponent = () => {
   const icon = [
@@ -30,9 +33,14 @@ const ContactMeComponent = () => {
       title: 'HelmiITK',
     }
   ]
+  useEffect(() => {
+    AOS.init({
+      once: false,
+    })
+  })
   return (
     <div className="mt-10 mb-8">
-      <h1 className="text-center text-white text-2xl font-medium mb-4">Its Me</h1>
+      <h1 className="text-center text-white text-2xl font-medium mb-4" data-aos="fade-down" data-aos-duration="1000">Its Me</h1>
 
       {/* via sosial media */}
       <div className="flex items-center mt-2">
@@ -40,6 +48,9 @@ const ContactMeComponent = () => {
           src={imgHelmi}
           alt="img-helmi"
           className="w-1/2 drop-shadow-2xl"
+          data-aos="fade-right"
+          data-aos-duration="600"
+          data-aos-delay="500"
         />
         <div className="flex flex-col mx-8 gap-4">
           {icon.map((item, i) => (
@@ -50,6 +61,9 @@ const ContactMeComponent = () => {
               target="_self"
               rel="noopener noreferrer"
               className="text-quaternary flex items-center gap-2 underline text-sm"
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-delay="800"
             >
               {item.logo} {item.title}
             </a>
@@ -57,7 +71,13 @@ const ContactMeComponent = () => {
         </div>
       </div>
       {/* My Spotify */}
-      <div className="flex mt-8 justify-center drop-shadow-2xl shadow-green-700">
+      <div
+        className="flex mt-8 justify-center drop-shadow-2xl shadow-green-700"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="350"
+      >
         <SpotifyComponent />
       </div>
       {/* via email */}
