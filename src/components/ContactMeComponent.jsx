@@ -35,7 +35,7 @@ const ContactMeComponent = () => {
   ]
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
     })
   })
   return (

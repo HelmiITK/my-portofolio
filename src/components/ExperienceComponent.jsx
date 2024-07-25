@@ -62,7 +62,7 @@ const ExperienceComponent = () => {
   
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
     })
   })
   return (

@@ -1,11 +1,17 @@
 import { useState } from "react";
 import logo from "../assets/Helmi logo 1.png";
+import PropTypes from "prop-types";
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ handleNavItemClick }) => {
   const [openNav, setOpenNav] = useState(false);
 
   const handleNavToggle = () => {
     setOpenNav(!openNav);
+  };
+
+  const handleItemClick = (section) => {
+    handleNavItemClick(section);
+    setOpenNav(false);
   };
 
   return (
@@ -47,11 +53,12 @@ const NavbarComponent = () => {
           } transition-transform duration-300 ease-in-out z-10`}
       >
         <ul className="text-primary font-medium flex flex-col gap-3 pt-10 px-5">
-          <li>Home</li>
-          <li>Skills</li>
-          <li>Sertificat</li>
-          <li>Experience</li>
-          <li>Contact</li>
+          <li onClick={() => handleItemClick("home")}>Home</li>
+          <li onClick={() => handleItemClick("about")}>About</li>
+          <li onClick={() => handleItemClick("skills")}>Skills</li>
+          <li onClick={() => handleItemClick("certificate")}>Certificate</li>
+          <li onClick={() => handleItemClick("experience")}>Experience</li>
+          <li onClick={() => handleItemClick("contact")}>Contact</li>
         </ul>
       </div>
     </div>
@@ -59,3 +66,7 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
+
+NavbarComponent.propTypes = {
+  handleNavItemClick: PropTypes.func
+}

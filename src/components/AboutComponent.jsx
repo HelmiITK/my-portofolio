@@ -18,7 +18,7 @@ import { useEffect } from "react"
 const AboutComponent = () => {
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
     })
   })
   return (

@@ -47,7 +47,7 @@ const CertificateComponent = () => {
 
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
     })
   })
 
@@ -83,7 +83,7 @@ const CertificateComponent = () => {
               </div>
               {/* Open the modal using document.getElementById('ID').showModal() method */}
               <button
-                className="border-none bg-quaternary rounded-box py-[5px] text-sm font-medium mt-4 capitalize"
+                className="border-none bg-quaternary rounded-box py-2 text-sm font-medium mt-4 capitalize"
                 onClick={() => document.getElementById(item?.id).showModal()}>
                 visite certificate
               </button>
