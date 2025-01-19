@@ -44,12 +44,12 @@ const HomePage = () => {
     <>
       <div className="container mx-auto bg-primary h-auto">
         <Navbar handleNavItemClick={handleNavItemClick} />
-        <div ref={homeRef}><MainSactionComponent /></div>
-        <div ref={aboutRef}><AboutComponent /></div>
-        <div ref={skillsRef}><SkillsComponent /></div>
-        <div ref={certificateRef}><CertificateComponent /></div>
-        <div ref={experienceRef}><ExperienceComponent /></div>
-        <div ref={contactRef}><ContactMeComponent /></div>
+        <div ref={homeRef} className="lg:scroll-mt-10"><MainSactionComponent /></div>
+        <div ref={aboutRef} className="scroll-mt-10"><AboutComponent /></div>
+        <div ref={skillsRef} className="scroll-mt-20"><SkillsComponent /></div>
+        <div ref={certificateRef} className="scroll-mt-20"><CertificateComponent /></div>
+        <div ref={experienceRef} className="scroll-mt-20"><ExperienceComponent /></div>
+        <div ref={contactRef} className="scroll-mt-20"><ContactMeComponent /></div>
         <FooterComponent />
       </div>
     </>

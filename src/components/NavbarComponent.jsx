@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/Helmi logo 1.png";
 import PropTypes from "prop-types";
 
 const NavbarComponent = ({ handleNavItemClick }) => {
   const [openNav, setOpenNav] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleNavToggle = () => {
     setOpenNav(!openNav);
@@ -14,13 +15,33 @@ const NavbarComponent = ({ handleNavItemClick }) => {
     setOpenNav(false);
   };
 
+  // Detect scroll to add shadow
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="w-full bg-gradient-to-b from-lime-50 fixed z-50">
+    <div
+      className={`w-full bg-gradient-to-b from-lime-50 fixed z-50 lg:flex justify-between items-center bg-primary bg-opacity-70 lg:from-transparent ${
+        isScrolled ? "shadow-md" : ""
+      } transition-shadow duration-300`}
+    >
       <div className="flex justify-between items-center">
         <img src={logo} alt="Logo" className="w-24" />
         {/* hamburger menu */}
         <button
-          className="btn btn-circle swap swap-rotate bg-transparent border-none z-30 relative"
+          className="btn btn-circle swap swap-rotate bg-transparent border-none z-30 relative lg:hidden"
           onClick={handleNavToggle}
         >
           {/* hamburger icon */}
@@ -47,20 +68,91 @@ const NavbarComponent = ({ handleNavItemClick }) => {
           )}
         </button>
       </div>
-      {/* isi navbar jika opened */}
+      {/* isi navbar jika opened mode hp*/}
       <div
-        className={`fixed top-0 right-0 w-3/4 max-w-xs bg-quaternary h-screen transform ${openNav ? "translate-x-24" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out z-10`}
+        className={`fixed top-0 right-0 w-3/4 max-w-xs bg-quaternary h-screen transform ${
+          openNav ? "translate-x-24" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-10`}
       >
         <ul className="text-primary font-medium flex flex-col gap-3 pt-10 px-5">
-          <li onClick={() => handleItemClick("home")}>Home</li>
-          <li onClick={() => handleItemClick("about")}>About</li>
-          <li onClick={() => handleItemClick("skills")}>Skills</li>
-          <li onClick={() => handleItemClick("certificate")}>Certificate</li>
-          <li onClick={() => handleItemClick("experience")}>Experience</li>
-          <li onClick={() => handleItemClick("contact")}>Contact</li>
+          <li
+            onClick={() => handleItemClick("home")}
+            className="cursor-pointer"
+          >
+            Home
+          </li>
+          <li
+            onClick={() => handleItemClick("about")}
+            className="cursor-pointer"
+          >
+            About
+          </li>
+          <li
+            onClick={() => handleItemClick("skills")}
+            className="cursor-pointer"
+          >
+            Skills
+          </li>
+          <li
+            onClick={() => handleItemClick("certificate")}
+            className="cursor-pointer"
+          >
+            Certificate
+          </li>
+          <li
+            onClick={() => handleItemClick("experience")}
+            className="cursor-pointer"
+          >
+            Experience
+          </li>
+          <li
+            onClick={() => handleItemClick("contact")}
+            className="cursor-pointer"
+          >
+            Contact
+          </li>
         </ul>
       </div>
+
+      {/* navbar web mode */}
+      <ul className="hidden lg:flex flex-row text-white font-medium gap-16 px-5">
+        <li
+          onClick={() => handleItemClick("home")}
+          className="cursor-pointer hover:text-quaternary hover:scale-95 hover:ease-in duration-200"
+        >
+          Home
+        </li>
+        <li
+          onClick={() => handleItemClick("about")}
+          className="cursor-pointer hover:text-quaternary hover:scale-95 hover:ease-in duration-200"
+        >
+          About
+        </li>
+        <li
+          onClick={() => handleItemClick("skills")}
+          className="cursor-pointer hover:text-quaternary hover:scale-95 hover:ease-in duration-200"
+        >
+          Skills
+        </li>
+        <li
+          onClick={() => handleItemClick("certificate")}
+          className="cursor-pointer hover:text-quaternary hover:scale-95 hover:ease-in duration-200"
+        >
+          Certificate
+        </li>
+        <li
+          onClick={() => handleItemClick("experience")}
+          className="cursor-pointer hover:text-quaternary hover:scale-95 hover:ease-in duration-200"
+        >
+          Experience
+        </li>
+        <li
+          onClick={() => handleItemClick("contact")}
+          className="cursor-pointer hover:text-quaternary hover:scale-95 hover:ease-in duration-200"
+        >
+          Contact
+        </li>
+      </ul>
     </div>
   );
 };
@@ -68,5 +160,5 @@ const NavbarComponent = ({ handleNavItemClick }) => {
 export default NavbarComponent;
 
 NavbarComponent.propTypes = {
-  handleNavItemClick: PropTypes.func
-}
+  handleNavItemClick: PropTypes.func,
+};

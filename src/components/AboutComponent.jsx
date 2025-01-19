@@ -22,11 +22,11 @@ const AboutComponent = () => {
     })
   })
   return (
-    <div className="mt-6 mb-[280px] relative">
+    <div className="mt-6 mb-[280px] relative lg:mt-40">
       <img
         src={wave}
         alt="wave"
-        className="rotate-180"
+        className="rotate-180 lg:w-full"
       />
       <h1 className="text-white font-medium text-2xl text-center capitalize absolute top-8 inset-0"
         data-aos="fade-down"
