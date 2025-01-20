@@ -5,7 +5,7 @@ import { FaPause } from "react-icons/fa";
 
 const SpotifyComponent = () => {
   return (
-    <div className="bg-white p-6 mx-6 w-[60%] rounded-md flex flex-col gap-4 drop-shadow-2xl shadow-[0px_27px_70px_-10px] shadow-green-500">
+    <div className="bg-white p-6 mx-6 w-[70%] rounded-md flex flex-col gap-4 drop-shadow-2xl shadow-[0px_27px_70px_-10px] shadow-green-500">
       <img
         src={spotifyLogo}
         alt="spotofy logo"

@@ -7,10 +7,12 @@ import ContactMeComponent from "../components/ContactMeComponent"
 import FooterComponent from "../components/FooterComponent"
 import ExperienceComponent from "../components/ExperienceComponent"
 import { useRef } from "react"
+import AboutComponentWeb from "../components/AboutComponentWeb"
 
 const HomePage = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const aboutRefWeb = useRef(null);
   const skillsRef = useRef(null);
   const certificateRef = useRef(null);
   const experienceRef = useRef(null);
@@ -23,6 +25,7 @@ const HomePage = () => {
         break;
       case "about":
         aboutRef.current.scrollIntoView({ behavior: "smooth" });
+        aboutRefWeb.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "skills":
         skillsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -45,7 +48,8 @@ const HomePage = () => {
       <div className="container mx-auto bg-primary h-auto">
         <Navbar handleNavItemClick={handleNavItemClick} />
         <div ref={homeRef} className="lg:scroll-mt-10"><MainSactionComponent /></div>
-        <div ref={aboutRef} className="scroll-mt-10"><AboutComponent /></div>
+        <div ref={aboutRefWeb} className="scroll-mt-20"><AboutComponentWeb /></div>
+        <div ref={aboutRef} className="scroll-mt-10 lg:hidden"><AboutComponent /></div>
         <div ref={skillsRef} className="scroll-mt-20"><SkillsComponent /></div>
         <div ref={certificateRef} className="scroll-mt-20"><CertificateComponent /></div>
         <div ref={experienceRef} className="scroll-mt-20"><ExperienceComponent /></div>

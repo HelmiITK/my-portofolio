@@ -4,8 +4,9 @@ import bintang from "../assets/Star 3.png";
 import kotak from "../assets/Rectangle 4.png";
 import bulat from "../assets/Ellipse 15.png";
 import wave from "../assets/pattern.svg";
+import Flag from "react-world-flags";
 
-import Wave from "react-wavify"
+import Wave from "react-wavify";
 import { useState } from "react";
 
 const MainSactionComponent = () => {
@@ -16,19 +17,25 @@ const MainSactionComponent = () => {
       {/* say hello */}
       <div className="flex flex-col gap-3 ml-4">
         <div className="capitalize">
-          <h1 className="text-quinary text-sm">hello 👋🏻</h1>
-          <h2 className="text-quaternary font-semibold text-2xl">im helmi</h2>
+          <h1 className="text-quinary text-sm lg:text-base">hello 👋🏻</h1>
+          <h2 className="text-quaternary font-semibold text-2xl lg:text-4xl">
+            im helmi
+          </h2>
         </div>
         <div className="capitalize">
-          <h3 className="text-white font-medium text-lg">
+          <h3 className="text-white font-medium text-lg lg:text-2xl">
             frontend web developer
           </h3>
-          <h4 className="text-white font-extralight">from indonesia</h4>
+          <div className="flex items-center gap-3">
+            <h4 className="text-white font-extralight lg:text-lg">from indonesia</h4>
+            <Flag code="ID" style={{ width: 25 }} />
+          </div>
         </div>
         <div>
-          <button className="capitalize w-1/2 h-9 text-primary border-none rounded-md bg-quaternary font-medium text-base relative lg:w-[80%] lg:hover:scale-105 duration-200 ease-in-out hover:text-quaternary hover:bg-secondary"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          <button
+            className="capitalize w-1/2 h-9 text-primary border-none rounded-md bg-quaternary font-medium text-base relative lg:w-[80%] lg:hover:scale-105 duration-200 ease-in-out hover:text-quaternary hover:bg-secondary"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             <a
               href="https://wa.me/6285346901814"
@@ -38,15 +45,15 @@ const MainSactionComponent = () => {
             >
               contact me
             </a>
-            <Wave 
+            <Wave
               fill={isHovered ? "#DBF227" : "#005C53"} // Warna berubah saat hover
               paused={false}
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               options={{
                 height: 138,
                 amplitude: 18,
                 speed: 0.15,
-                points: 4
+                points: 4,
               }}
               className="absolute z-10 bottom-[0.3px]"
             />
@@ -72,7 +79,7 @@ const MainSactionComponent = () => {
           <img
             src={bulat}
             alt=""
-            className="w-14 h-14 absolute left-4 -bottom-6 animate-bounce"
+            className="w-14 h-14 absolute left-4 -bottom-6 animate-bounce lg:left-10 lg:bottom-2"
           />
           <img
             src={kotak}
